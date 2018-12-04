@@ -31,7 +31,7 @@ questions:
     label: Grafana Watcher Image Tag
 # grafana configurations
 - variable: adminUser
-  default: "admin"
+  default: {{ template "grafana.fullname" . }}
   description: "Grafana admin username"
   type: string
   group: "Grafana Settings"
